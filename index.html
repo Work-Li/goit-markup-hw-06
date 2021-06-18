@@ -439,7 +439,7 @@
         </div>
         <div class="subscription">
           <h3 class="list-item-title">подпишитесь на рассылку</h3>
-          <form name="subscription-form">
+          <form name="subscription-form" class="subscription-form">
             <input
               type="email"
               name="email"
@@ -507,18 +507,20 @@
               required
             ></textarea>
           </label>
-          <div class="wrap-policy">
+          <label for="checkbox" class="modal-polisy">
             <input
               type="checkbox"
               id="checkbox"
               name="user-agree"
               class="modal-checkbox"
             />
-            <label for="checkbox" class="modal-polisy"
-              >Соглашаюсь с рассылкой и принимаю <a>Условия договора</a></label
-            >
-          </div>
-          <button type="button" class="btn subscription-btn">Отправить</button>
+            <svg class="checkbox-icon">
+              <use href="./images/icon.svg#checkbox"></use>
+            </svg>
+            Соглашаюсь с рассылкой и принимаю
+            <span class="text">Условия договора</span>
+          </label>
+          <button type="button" class="btn submit-btn">Отправить</button>
         </form>
       </div>
     </div>
