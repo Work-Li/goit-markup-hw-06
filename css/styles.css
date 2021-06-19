@@ -652,7 +652,7 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -688,13 +688,17 @@ body {
   justify-content: center;
 
 }
-.close-btn:hover .close-icon {
-  fill: var(--active-color)
+.close-btn:hover .close-icon,
+.close-btn:focus .close-icon {
+  fill: var(--active-color);
 }
+
 .close-icon {
   width: 18px;
   height: 18px;
   fill: var(--close-btn-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .modal-title {
   text-align: center;
@@ -802,8 +806,7 @@ body {
   width: 16px;
   height: 15px;
   fill: var(--basis-text-color);
-  border: 2px solid black;
-  border-radius: 3px;
+
 }
 .modal-checkbox {
   position: absolute;
@@ -818,7 +821,9 @@ body {
 }
 
 .modal-checkbox:checked + .checkbox-icon {
-  background-color: var(--active-color);
+  fill: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
   background-origin: content-box;
 }
 
